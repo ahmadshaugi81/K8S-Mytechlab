@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: myt-hello-nginx
   labels:
-    tier: frontend
+    tier: front-end
 spec:
   containers:
   - name: myt-hello-nginx
