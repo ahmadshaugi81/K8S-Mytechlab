@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-hello-nginx
+  name: service-myt-hello-nginx
 spec:
   type: NodePort
   selector:
-    type: front-end
+    app: myt-hello-nginx
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30080
+    nodePort: 30088

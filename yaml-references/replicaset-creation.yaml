@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaset-hello-nginx
+  name: replica-myt-hello-nginx
   labels:
-    app: myapp
+    app: myt-hello-nginx
     type: front-end
 spec:
-  replicas: 8
+  replicas: 16
   selector:
     matchLabels:
-      type: front-end
+      app: myt-hello-nginx
   template:
     metadata:
       name: pods-hello-nginx
       labels:
-        app: myapp
+        app: myt-hello-nginx
         type: front-end
     spec:
       containers:
