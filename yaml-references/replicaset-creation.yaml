@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-hello-nginx
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      type: front-end
+  template:
+    metadata:
+      name: myt-hello-nginx
+      labels:
+        tier: front-end
+    spec:
+      containers:
+      - name: myt-hello-nginx
+        image: ahmadshaugi81/hello-nginx
