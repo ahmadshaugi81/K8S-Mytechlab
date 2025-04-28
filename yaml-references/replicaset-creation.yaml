@@ -12,10 +12,11 @@ spec:
       type: front-end
   template:
     metadata:
-      name: myt-hello-nginx
+      name: pods-hello-nginx
       labels:
+        app: myapp
         tier: front-end
     spec:
       containers:
-      - name: myt-hello-nginx
+      - name: myt-hello-nginx-container
         image: ahmadshaugi81/hello-nginx
